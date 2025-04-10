@@ -2,6 +2,7 @@ package model.dao;
 
 import java.util.List;
 
+import model.entities.Department;
 import model.entities.Seller;
 
 public interface SellerDao {
@@ -11,5 +12,8 @@ public interface SellerDao {
 	void deleteById(Integer id);  // Operação que deleta uma linha do banco conforme o id informado
 	Seller findById(Integer id);  // Opeção que consulta um ojeto no banco de dados e retorna False ou True
 	List<Seller> findAll();  // Operação que retorna todos os departamentos
+	
+	List<Seller> findByDepartment(Department department);   
+	
 
 }
